@@ -64,15 +64,24 @@ The API will be available at `https://localhost:5001` and `http://localhost:5000
 
 ## Environment Variables
 
-The project uses `appsettings.json` for configuration, but you can also use environment variables to override any settings. Here are the key configuration options:
+The project uses both `appsettings.json` and `.env` file for configuration. To set up your environment variables:
 
-- `ConnectionStrings__DefaultConnection` - Database connection string
-- `Logging__LogLevel__Default` - Logging level configuration
-- `AllowedHosts` - Allowed hosts configuration
+1. Create a `.env` file in the root directory of the project
+2. Add your configuration values in the following format:
+
+```env
+# Database Configuration
+CONNECTION_STRING=Server=localhost;Database=hng13stage2;User=postgres;Password=postgres;Port=5432
+```
+
+The application will automatically load these environment variables on startup using the DotNetEnv package.
+
+- Using .env file (recommended for development)
+- Using system environment variables (recommended for production)
 
 ## API Documentation
 
-The API documentation is available at `/swagger` when running the application in development mode.
+The API documentation is available at `/scalar/v1` when running the application in development mode.
 
 ### Available Endpoints
 
