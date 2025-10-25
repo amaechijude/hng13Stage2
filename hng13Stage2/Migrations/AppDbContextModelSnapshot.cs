@@ -41,7 +41,7 @@ namespace hng13Stage2.Migrations
                         .HasColumnType("decimal(22,2)");
 
                     b.Property<decimal?>("ExchangeRate")
-                        .HasColumnType("numeric");
+                        .HasColumnType("decimal(18,6)");
 
                     b.Property<string>("FlagUrl")
                         .IsRequired()

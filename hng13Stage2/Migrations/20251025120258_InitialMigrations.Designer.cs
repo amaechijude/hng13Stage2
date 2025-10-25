@@ -12,7 +12,7 @@ using hng13Stage2.Data;
 namespace hng13Stage2.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251025102825_InitialMigrations")]
+    [Migration("20251025120258_InitialMigrations")]
     partial class InitialMigrations
     {
         /// <inheritdoc />
@@ -44,7 +44,7 @@ namespace hng13Stage2.Migrations
                         .HasColumnType("decimal(22,2)");
 
                     b.Property<decimal?>("ExchangeRate")
-                        .HasColumnType("numeric");
+                        .HasColumnType("decimal(18,6)");
 
                     b.Property<string>("FlagUrl")
                         .IsRequired()

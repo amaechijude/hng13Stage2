@@ -22,7 +22,11 @@ namespace hng13Stage2.Data
 
             modelBuilder.Entity<Country>()
                 .Property(c => c.EstimatedGdp)
-                .HasColumnType("decimal(22,2)");      
+                .HasColumnType("decimal(22,2)");
+
+            modelBuilder.Entity<Country>()
+                .Property(c => c.ExchangeRate)
+                .HasColumnType("decimal(18,6)");  
         }
     }
 }

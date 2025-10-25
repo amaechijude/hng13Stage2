@@ -23,7 +23,7 @@ namespace hng13Stage2.Migrations
                     Region = table.Column<string>(type: "text", nullable: false),
                     Population = table.Column<long>(type: "bigint", nullable: false),
                     CurrencyCode = table.Column<string>(type: "text", nullable: true),
-                    ExchangeRate = table.Column<decimal>(type: "numeric", nullable: true),
+                    ExchangeRate = table.Column<decimal>(type: "numeric(18,6)", nullable: true),
                     EstimatedGdp = table.Column<decimal>(type: "numeric(22,2)", nullable: false),
                     FlagUrl = table.Column<string>(type: "text", nullable: false),
                     LastRefreshedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
