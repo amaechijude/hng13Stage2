@@ -50,6 +50,8 @@ if (app.Environment.IsDevelopment())
     app.MapScalarApiReference();
 }
 
+app.MapGet("/", () => "HNGi 13 Stage 2 API is running...");
+
 app.UseHttpsRedirection();
 app.UseCors("AllowAny");
 app.UseAuthorization();
